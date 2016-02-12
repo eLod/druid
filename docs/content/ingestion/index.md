@@ -8,8 +8,8 @@ A Druid ingestion spec consists of 3 components:
 
 ```json
 {
-  "dataSchema" : {...}
-  "ioConfig" : {...}
+  "dataSchema" : {...},
+  "ioConfig" : {...},
   "tuningConfig" : {...}
 }
 ```

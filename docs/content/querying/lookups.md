@@ -3,6 +3,10 @@ layout: doc_page
 ---
 # Lookups
 
+<div class="note caution">
+Lookups are an experimental feature.
+</div>
+
 Lookups are a concept in Druid where dimension values are (optionally) replaced with new values. 
 See [dimension specs](../querying/dimensionspecs.html) for more information. For the purpose of these documents, 
 a "key" refers to a dimension value to match, and a "value" refers to its replacement. 
@@ -287,6 +291,8 @@ The following are the handling for kafka consumer properties in `druid.query.ren
 
 To test this setup, you can send key/value pairs to a kafka stream via the following producer console:
 
-`./bin/kafka-console-producer.sh --property parse.key=true --property key.separator="->" --broker-list localhost:9092 --topic testTopic`
+```
+./bin/kafka-console-producer.sh --property parse.key=true --property key.separator="->" --broker-list localhost:9092 --topic testTopic
+```
 
 Renames can then be published as `OLD_VAL->NEW_VAL` followed by newline (enter or return)
